@@ -1,0 +1,197 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	.toolbar
+		.toolbar-top-wrap
+			.main-cont
+				.toolbar-top
+					a(href="/").logo
+						img(src="img/logo.png", alt="").logo__img
+						.logo__text Вездеходы <br> сделанные в Росии
+					a(href="tel:+7 812 629-15-55").phone
+						+icon("phone","icon")
+						span +7 812 629-15-55
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+					.toolbar-order
+						.btn--sm.btn--white Оставить заявку
+		.nav-wrap
+			.main-cont
+				.nav
+					-
+						var items = [
+							{name: "главная", id: "#main"},
+							{name: "модели", id: "#model"},
+							{name: "характеристики", id: "#skils"},
+							{name: "почему тайфун", id: "#why"},
+							{name: "технологии", id: "#tech"},
+							{name: "видео/фото", id: "#video"},
+							{name: "отзывы/тесты", id: "#review"},
+							{name: "доставка/лизинг", id: "#deliver"},
+							{name: "контакты", id: "#contact"},
+						];
+					each item,i in items
+						a(href=item.id rel='m_PageScroll2id' class=i===0?'nav__el--active':'').nav__el #{item.name}
+	.banner(style="background-image:url('img/banner.jpg')")
+		.slogan-wrap
+			.main-cont
+				.slogan
+					.slogan__title Тайфун
+					.slogan__title-sub вездеход
+					.slogan__text созданный побеждать!
+					a(href="#model" rel='m_PageScroll2id' ).btn--md.btn--white подробнее
+
+	.content
+		.section
+			.main-cont
+				.advant
+					-
+						var items = [
+							{"icon": "map","text": "Запас хода","title": "Более 500 км"},
+							{"icon": "control","text": "управление","title": "Джойстиком"},
+							{"icon": "calendar","text": "автономность ","title": "Более 4 дней"},
+							{"icon": "engine","text": "турбо-двигатель","title": "Япония kubota"},
+							{"icon": "transmision","text": "трансмиссия","title": "от танка"},
+							{"icon": "construction","text": "Рама (Швеция) ","title": "сталь docol"},
+						];
+					each item in items
+						.advant__el
+							.advant__el-icon
+								+icon(item.icon,"icon")
+							.advant__el-text #{item.text}
+							.advant__el-title #{item.title}
+		.section.section--dark#model
+			.main-cont
+				.section-title модели
+				.slider-wrap.slider-wrap--simple
+					.slider-control.slider-control--left
+						+icon("arrow-left-coner","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right-coner","icon")
+					.slider-item.slider-card
+						- for (var i=0;i<2;i++)
+							.slider-card__el
+								.card-wrap
+									.card-img
+										.gallery-slider-wrap
+											.gallery-slider
+												.gallery__el(style="background-image:url('img/model-1.jpg')")
+												.gallery__el(style="background-image:url('img/model-2.jpg')")
+												.gallery__el(style="background-image:url('img/model-3.jpg')")
+											.gallery-slider-nav
+												.gallery__el-nav-wrap
+													.gallery__el-nav(style="background-image:url('img/model-1.jpg')")
+												.gallery__el-nav-wrap
+													.gallery__el-nav(style="background-image:url('img/model-2.jpg')")
+												.gallery__el-nav-wrap
+													.gallery__el-nav(style="background-image:url('img/model-3.jpg')")
+
+									.card-descr
+										.title.type--bold.type--lgx.mb-32 «тайфун» rx-387-20
+										.title.type--lg.mb-24 Технические Преимущества
+
+										-
+											var items = [
+												{'name': 'Вес:', 'val': '1 620 кг'},
+												{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+												{'name': 'Трансмссия:', 'val': 'от танка'},
+												{'name': 'Колеса:', 'val': '1 650 мм'},
+												{'name': 'Привод:', 'val': 'карданная передача'},
+												{'name': 'Габариты:', 'val': '3 880мм / 2 500мм / 2 480мм'},
+												{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+												{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+											];
+										each item in items
+											.book-row
+												.book-row__title #{item.name}
+												.book-row__dot
+												.book-row__value #{item.val}
+
+		.section#skils
+			.main-cont
+				.section-title Характеристики
+				.js-tab-wrap.mb-48
+					.tab.js-tick-cont.mb-48
+						.tab__el.js-tick.active.js-tab основные
+						.tab__el.js-tick.js-tab Двигатель
+						.tab__el.js-tick.js-tab Трансмиссия
+						.tab__el.js-tick.js-tab масса и габариты
+					.tab-cont.js-tab-cont.active
+						-
+							var items = [
+								{'name': 'Вес:', 'val': '1 620 кг'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Трансмссия:', 'val': 'от танка'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Привод:', 'val': 'карданная передача'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+							];
+						each item in items
+							.book-row
+								.book-row__title #{item.name}
+								.book-row__dot
+								.book-row__value #{item.val}
+					.tab-cont.js-tab-cont
+						-
+							var items = [
+								{'name': 'Вес:', 'val': '1 620 кг'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Трансмссия:', 'val': 'от танка'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Привод:', 'val': 'карданная передача'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+							];
+						each item in items
+							.book-row
+								.book-row__title #{item.name}
+								.book-row__dot
+								.book-row__value #{item.val}
+					.tab-cont.js-tab-cont
+						-
+							var items = [
+								{'name': 'Вес:', 'val': '1 620 кг'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Трансмссия:', 'val': 'от танка'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+							];
+						each item in items
+							.book-row
+								.book-row__title #{item.name}
+								.book-row__dot
+								.book-row__value #{item.val}
+					.tab-cont.js-tab-cont
+						-
+							var items = [
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Трансмссия:', 'val': 'от танка'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Привод:', 'val': 'карданная передача'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+							];
+						each item in items
+							.book-row
+								.book-row__title #{item.name}
+								.book-row__dot
+								.book-row__value #{item.val}
+				.btn-row.btn-row--line.btn-row--mid
+					.btn--md.btn--light узнать стоимость
+					.btn--md.btn--light скачать комплектации и цены
+	+footer()
+include ./block_html/_script.pug
