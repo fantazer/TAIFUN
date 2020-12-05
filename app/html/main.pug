@@ -2,7 +2,7 @@ include block_html/_style.pug
 include block_html/_include.pug
 
 .page
-	.toolbar
+	.toolbar.toolbar--header#main
 		.toolbar-top-wrap
 			.main-cont
 				.toolbar-top
@@ -19,14 +19,14 @@ include block_html/_include.pug
 							+icon("soc-vk","icon")
 					.toolbar-order
 						.btn--sm.btn--white Оставить заявку
-		.nav-wrap
+		.nav-wrap.nav-wrap--top
 			.main-cont
 				.nav
 					-
 						var items = [
 							{name: "главная", id: "#main"},
 							{name: "модели", id: "#model"},
-							{name: "характеристики", id: "#skils"},
+							{name: "характеристики", id: "#skills"},
 							{name: "почему тайфун", id: "#why"},
 							{name: "технологии", id: "#tech"},
 							{name: "видео/фото", id: "#video"},
@@ -35,7 +35,7 @@ include block_html/_include.pug
 							{name: "контакты", id: "#contact"},
 						];
 					each item,i in items
-						a(href=item.id rel='m_PageScroll2id' class=i===0?'nav__el--active':'').nav__el #{item.name}
+						a(href=item.id rel='m_PageScroll2id' ).nav__el #{item.name}
 	.banner(style="background-image:url('img/banner.jpg')")
 		.slogan-wrap
 			.main-cont
@@ -64,6 +64,7 @@ include block_html/_include.pug
 								+icon(item.icon,"icon")
 							.advant__el-text #{item.text}
 							.advant__el-title #{item.title}
+		//#model
 		.section.section--dark#model
 			.main-cont
 				.section-title модели
@@ -110,88 +111,312 @@ include block_html/_include.pug
 												.book-row__title #{item.name}
 												.book-row__dot
 												.book-row__value #{item.val}
-
-		.section#skils
+		//#skills
+		.section#skills
 			.main-cont
 				.section-title Характеристики
-				.js-tab-wrap.mb-48
-					.tab.js-tick-cont.mb-48
-						.tab__el.js-tick.active.js-tab основные
-						.tab__el.js-tick.js-tab Двигатель
-						.tab__el.js-tick.js-tab Трансмиссия
-						.tab__el.js-tick.js-tab масса и габариты
-					.tab-cont.js-tab-cont.active
-						-
-							var items = [
-								{'name': 'Вес:', 'val': '1 620 кг'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Трансмссия:', 'val': 'от танка'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Привод:', 'val': 'карданная передача'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-							];
-						each item in items
-							.book-row
-								.book-row__title #{item.name}
-								.book-row__dot
-								.book-row__value #{item.val}
-					.tab-cont.js-tab-cont
-						-
-							var items = [
-								{'name': 'Вес:', 'val': '1 620 кг'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Трансмссия:', 'val': 'от танка'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Привод:', 'val': 'карданная передача'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-							];
-						each item in items
-							.book-row
-								.book-row__title #{item.name}
-								.book-row__dot
-								.book-row__value #{item.val}
-					.tab-cont.js-tab-cont
-						-
-							var items = [
-								{'name': 'Вес:', 'val': '1 620 кг'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Трансмссия:', 'val': 'от танка'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-							];
-						each item in items
-							.book-row
-								.book-row__title #{item.name}
-								.book-row__dot
-								.book-row__value #{item.val}
-					.tab-cont.js-tab-cont
-						-
-							var items = [
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Трансмссия:', 'val': 'от танка'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Привод:', 'val': 'карданная передача'},
-								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Колеса:', 'val': '1 650 мм'},
-								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-							];
-						each item in items
-							.book-row
-								.book-row__title #{item.name}
-								.book-row__dot
-								.book-row__value #{item.val}
+				.skills-cont
+					.js-tab-wrap.mb-48
+						.tab.js-tick-cont.mb-48
+							.tab__el.js-tick.active.js-tab основные
+							.tab__el.js-tick.js-tab Двигатель
+							.tab__el.js-tick.js-tab Трансмиссия
+							.tab__el.js-tick.js-tab масса и габариты
+						.tab-cont.js-tab-cont.active
+							-
+								var items = [
+									{'name': 'Вес:', 'val': '1 620 кг'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Трансмссия:', 'val': 'от танка'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Привод:', 'val': 'карданная передача'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+								];
+							each item in items
+								.book-row
+									.book-row__title #{item.name}
+									.book-row__dot
+									.book-row__value #{item.val}
+						.tab-cont.js-tab-cont
+							-
+								var items = [
+									{'name': 'Вес:', 'val': '1 620 кг'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Трансмссия:', 'val': 'от танка'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Привод:', 'val': 'карданная передача'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+								];
+							each item in items
+								.book-row
+									.book-row__title #{item.name}
+									.book-row__dot
+									.book-row__value #{item.val}
+						.tab-cont.js-tab-cont
+							-
+								var items = [
+									{'name': 'Вес:', 'val': '1 620 кг'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Трансмссия:', 'val': 'от танка'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+								];
+							each item in items
+								.book-row
+									.book-row__title #{item.name}
+									.book-row__dot
+									.book-row__value #{item.val}
+						.tab-cont.js-tab-cont
+							-
+								var items = [
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Трансмссия:', 'val': 'от танка'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Привод:', 'val': 'карданная передача'},
+									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Колеса:', 'val': '1 650 мм'},
+									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+								];
+							each item in items
+								.book-row
+									.book-row__title #{item.name}
+									.book-row__dot
+									.book-row__value #{item.val}
+					.btn-row.btn-row--line.btn-row--mid
+						.btn--md.btn--light узнать стоимость
+						.btn--md.btn--light скачать комплектации и цены
+
+		//#why
+		.section.section--dark#why
+			.main-cont
+				.section-title почему тайфун?
+				.section-title-sub Да потому что это уникальная техника 4 в 1
+				.why
+					-
+						var items = [
+							{
+								"icon": "offroad",
+								"title": "для  бездорожья",
+								"text": "Трава, лес, скалы, камни, каменистые осыпки, песок, гравий",
+							},
+							{
+								"icon": "amphibian",
+								"title": "Амфибия",
+								"text": "Прибрежная зона. Идеален для рыбалки",
+							},
+							{
+								"icon": "swamp",
+								"title": "болотоход",
+								"text": "Песок, торф, болото, дюны, соленые озёра",
+							},
+							{
+								"icon": "snow",
+								"title": "Снегоход",
+								"text": "Свежевыпавщий снег, лёд, слежавшийся снег, сугробы",
+							},
+							{
+								"icon": "trailer",
+								"title": "Транспортировка прицепом",
+								"text": "Вам не нужно ломать голову как и с помощью чего отвезти ваш вездеход",
+							},
+							{
+								"icon": "double",
+								"title": "дублирующие системы",
+								"text": "Узлов управления, электроники, а так же простота в обслуживании и доступность деталей",
+							},
+						];
+					each item in items
+						.why__el
+							.why__el-icon
+								img(src="img/"+ item.icon + ".svg", alt="")
+							.why__el-title #{item.title}
+							.why__el-text #{item.text}
 				.btn-row.btn-row--line.btn-row--mid
-					.btn--md.btn--light узнать стоимость
-					.btn--md.btn--light скачать комплектации и цены
-	+footer()
+					.btn--md.btn--white запись на тест-драйв
+
+		//#tech
+		.section#tech
+			.main-cont
+				.section-title Технологии
+
+		//#video
+		.section.section--dark#video
+			.main-cont
+				.section-title видео
+				.video-wrap
+
+						.
+							<iframe width="400px" height="400px" src="https://www.youtube.com/embed/videoseries?list=PL0H_brRjTNNRfhqQ8711XipwSl7oeNrva&showinfo=0" showinfo="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; ;" allowfullscreen class="video"></iframe>
+		//#photo
+		.section#photo
+			.main-cont
+				.section-title Фото
+				.photo-list.mb-48
+					- for (var i=1;i<16;i++)
+						a(href="img/gallery-"+i+".jpg" data-fancybox="gallery").fancybox
+							.photo-list__el(style="background-image:url('img/gallery-"+i+".jpg')")
+				.btn-row.btn-row--line.btn-row--mid
+					.btn--md.btn--light Больше фото
+	
+		//#review
+		.section.section--dark#review
+			.main-cont
+				.section-title отзывы и тесты
+				.slider-wrap.slider-wrap--simple
+					.slider-control.slider-control--left
+						+icon("arrow-left-coner","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right-coner","icon")
+					.slider-item.slider-review
+						- for (var i=0;i<5;i++)
+							.review__el-wrap
+								.review__el
+									.review__el-text.text
+										p «За рулем»  первым поездил на машине второго поколения.
+										p Плавность хода нового «бездорожника» - почти как у кроссовера, а на спальном месте теперь можно вытянуться во весь рост.
+									.review__el-name Максим Гомякин
+									.review__el-location Журнал «За рулем»
+							.review__el-wrap
+								.review__el
+									.review__el-text.text
+										p Машина отлично управляеться, едет там где казалось бы вообще не возможно проехать даже на танке!
+										p Незаменимая техника для охотников, рыболовов и любителей экстремальных путешествий!
+									.review__el-name Стяпан Загуляйло
+									.review__el-location Интернет издание  «Вездеходы России»
+							.review__el-wrap
+								.review__el
+									.review__el-text.text
+										p Машина отлично управляеться, едет там где казалось бы вообще не возможно проехать даже на танке!
+										p Незаменимая техника для охотников, рыболовов и любителей экстремальных путешествий!
+										p Незаменимая техника для охотников, рыболовов и любителей экстремальных путешествий!
+									.review__el-name Стяпан Загуляйло
+									.review__el-location Интернет издание  «Вездеходы России»
+
+		.deliver-wrap#deliver
+			.deliver(style="background-image:url('img/country.svg')")
+				.deliver-cont
+					.deliver-title доставка
+					.deliver-text в любою точку россии <br> и ближнего зарубежья
+					.btn--md.btn--light рассчитать стоимость
+
+		.section.section--dark
+			.main-cont
+				.section-title лизинг
+				.section-title-sub.section-title-sub--lg Процентная ставка <span>5,5%</span> Возврат НДС: <span>20%</span>
+				.cost.mb-64
+					.cost__el
+						.cost__el-cont
+							.cost__el-img
+								img(src="img/car.svg", alt="")
+							.cost__el-text ежемесячный платёж
+							.cost__el-cost до <span>40 000</span> руб.
+							a(href="#").cost__el-link Вам доступно более <br> 20 предложений
+						.btn--md.btn--light Оставить заявку
+					.cost__el
+						.cost__el-cont
+							.cost__el-img
+								img(src="img/car.svg", alt="")
+							.cost__el-text ежемесячный платёж
+							.cost__el-cost до <span>60 000</span> руб.
+						.btn--md.btn--light Оставить заявку
+					.cost__el
+						.cost__el-cont
+							.cost__el-img
+								img(src="img/car.svg", alt="")
+							.cost__el-text ежемесячный платёж
+							.cost__el-cost до <span>100 000</span> руб.
+						.btn--md.btn--light Оставить заявку
+
+				.type--lg.type--bold.type--center.mb-48 Банки партнеры
+
+				.slider-wrap.slider-wrap--simple
+					.slider-control.slider-control--left
+						+icon("arrow-left-coner","icon")
+					.slider-control.slider-control--right
+						+icon("arrow-right-coner","icon")
+					.slider-item.slider-partner
+						- for (var j=0;j<3;j++)
+							- for (var i=1;i<5;i++)
+								.partner__el-wrap
+									.partner__el(style="background-image:url('img/partner-"+i+".png')")
+
+		//#example
+		.section#example
+			.main-cont
+				.section-title выданные Болотоходы
+				.photo-list.mb-48
+					- for (var i=1;i<10;i++)
+						a(href="img/example-" + i + ".jpg" data-fancybox="example").fancybox
+							.photo-list__el(style="background-image:url('img/example-" + i + ".jpg')")
+
+		.location#contact
+			.type--xl.type--head.type--center.mb-24 мы находимся по адресу
+			.type--lg.type--center.mb-64 Санкт Петербург, пр. Тореза, 68 <br> (территория завода)
+			.map-wrap
+				.map
+					//put map code her
+	//footer
+	.toolbar-footer
+		.toolbar-top-wrap
+			.main-cont
+				.toolbar-top
+					a(href="/").logo
+						img(src="img/logo.png", alt="").logo__img
+						.logo__text Вездеходы <br> сделанные в Росии
+					a(href="tel:+7 812 629-15-55").phone
+						+icon("phone","icon")
+						span +7 812 629-15-55
+					.soc-row
+						a(href="#").soc-row__el
+							+icon("soc-instagram","icon")
+						a(href="#").soc-row__el
+							+icon("soc-vk","icon")
+					.toolbar-order
+						.btn--sm.btn--white Оставить заявку
+		.nav-wrap
+			.main-cont
+				.nav
+					-
+						var items = [
+							{name: "главная", id: "#main"},
+							{name: "модели", id: "#model"},
+							{name: "характеристики", id: "#skills"},
+							{name: "почему тайфун", id: "#why"},
+							{name: "технологии", id: "#tech"},
+							{name: "видео/фото", id: "#video"},
+							{name: "отзывы/тесты", id: "#review"},
+							{name: "доставка/лизинг", id: "#deliver"},
+							{name: "контакты", id: "#contact"},
+						];
+					each item,i in items
+						a(href=item.id rel='m_PageScroll2id' class=i === 0 ? 'nav__el--active' : '').nav__el #{item.name}
+	.footer
+		.footer-row-wrap
+			.main-cont
+				.footer-row
+					.footer-info Вездеход «Тайфун» (C) 2017-2020 <br> Информация на сайте не является публичной офертой
+					.footer-info.footer-info--right Разработка и продвижение <br> веб студия «Снайпер»
+		.footer-row-wrap
+			.main-cont
+				.footer-row
+					.footer-info.text
+						p
+							a(href="#") Сертификат соответствия
+						p
+							a(href="#") Политика конфиденциальности
+						p
+							a(href="#") Пользовательское соглашение
+					.footer-info.footer-info--right.text
+						p Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Цены, условия приобретения, спецпредложения, технические характеристики и комплектации вездеходов, указанные на сайте, приведены для примера и могут быть изменены в любое время без предварительного уведомления.
+
 include ./block_html/_script.pug

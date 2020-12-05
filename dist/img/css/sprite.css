@@ -1,0 +1,290 @@
+.icon {
+    font-size: 10px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 51.2em 544.8em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.arrow-down:before {
+      background-position: 0em 0em;
+      width: 12.9em;
+      height: 12.9em;
+  }
+
+
+
+
+  .icon.arrow-down-fat:before {
+      background-position: 0em -12.9em;
+      width: 45.1847em;
+      height: 45.1847em;
+  }
+
+
+
+
+  .icon.arrow-left-coner:before {
+      background-position: 0em -58.1em;
+      width: 1.8em;
+      height: 1.2em;
+  }
+
+
+
+
+  .icon.arrow-right-coner:before {
+      background-position: 0em -59.3em;
+      width: 1.8em;
+      height: 1.2em;
+  }
+
+
+
+
+  .icon.arrow-up:before {
+      background-position: 0em -60.5em;
+      width: 6.4em;
+      height: 6.4em;
+  }
+
+
+
+
+  .icon.calendar:before {
+      background-position: 0em -66.9em;
+      width: 6.5em;
+      height: 6.4em;
+  }
+
+
+
+
+  .icon.checked:before {
+      background-position: 0em -73.3em;
+      width: 2.6em;
+      height: 2.6em;
+  }
+
+
+
+
+  .icon.close:before {
+      background-position: 0em -75.9em;
+      width: 1.8em;
+      height: 1.8106000000000002em;
+  }
+
+
+
+
+  .icon.construction:before {
+      background-position: 0em -77.8em;
+      width: 7.4em;
+      height: 4.3em;
+  }
+
+
+
+
+  .icon.control:before {
+      background-position: 0em -82.1em;
+      width: 7.6em;
+      height: 7.3em;
+  }
+
+
+
+
+  .icon.engine:before {
+      background-position: 0em -89.4em;
+      width: 6.3em;
+      height: 5.7em;
+  }
+
+
+
+
+  .icon.gearbox:before {
+      background-position: 0em -95.1em;
+      width: 5.9em;
+      height: 4.9em;
+  }
+
+
+
+
+  .icon.location:before {
+      background-position: 0em -100em;
+      width: 1.8393000000000002em;
+      height: 2.3039em;
+  }
+
+
+
+
+  .icon.map:before {
+      background-position: 0em -102.4em;
+      width: 6.4em;
+      height: 6.4em;
+  }
+
+
+
+
+  .icon.menu:before {
+      background-position: 0em -108.8em;
+      width: 1.7601em;
+      height: 1.56em;
+  }
+
+
+
+
+  .icon.paint:before {
+      background-position: 0em -110.4em;
+      width: 7.2em;
+      height: 6em;
+  }
+
+
+
+
+  .icon.phone:before {
+      background-position: 0em -116.4em;
+      width: 40.533300000000004em;
+      height: 40.533300000000004em;
+  }
+
+
+
+
+  .icon.search:before {
+      background-position: 0em -157em;
+      width: 2.3em;
+      height: 2.3em;
+  }
+
+
+
+
+  .icon.soc-facebook:before {
+      background-position: 0em -159.3em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.soc-in:before {
+      background-position: 0em -210.5em;
+      width: 43.011700000000005em;
+      height: 43.011700000000005em;
+  }
+
+
+
+
+  .icon.soc-instagram:before {
+      background-position: 0em -253.6em;
+      width: 43.8536em;
+      height: 43.8536em;
+  }
+
+
+
+
+  .icon.soc-msg:before {
+      background-position: 0em -297.5em;
+      width: 1.7em;
+      height: 1.9em;
+  }
+
+
+
+
+  .icon.soc-ok:before {
+      background-position: 0em -299.4em;
+      width: 9.5481em;
+      height: 9.5481em;
+  }
+
+
+
+
+  .icon.soc-telegram:before {
+      background-position: 0em -309em;
+      width: 30em;
+      height: 30em;
+  }
+
+
+
+
+  .icon.soc-twitter:before {
+      background-position: 0em -339em;
+      width: 41.015499999999996em;
+      height: 41.015499999999996em;
+  }
+
+
+
+
+  .icon.soc-vk:before {
+      background-position: 0em -380.1em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.soc-whatsapp:before {
+      background-position: 0em -431.3em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.soc-youtube:before {
+      background-position: 0em -482.5em;
+      width: 51.2em;
+      height: 51.2em;
+  }
+
+
+
+
+  .icon.tire:before {
+      background-position: 0em -533.7em;
+      width: 4.8em;
+      height: 7.4em;
+  }
+
+
+
+
+  .icon.transmision:before {
+      background-position: 0em -541.1em;
+      width: 7.9em;
+      height: 3.7em;
+  }
+
+
+
+
+

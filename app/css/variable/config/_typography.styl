@@ -52,7 +52,7 @@ font-size 48px
 	typeSize(36,24)
 
 .type--xl
-	typeSize(48,20)
+	typeSize(48,36)
 
 .type--mark
 	color $mark
@@ -62,6 +62,10 @@ font-size 48px
 
 .type--center
 	text-align center
+
+.type--head
+	up()
+	font-weight: 700
 
 .title
 	up()
@@ -131,6 +135,11 @@ p
 	p
 		line-height: 1.6
 		margin-bottom: 30px
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
 	ul
 		margin-bottom: 30px
 		li

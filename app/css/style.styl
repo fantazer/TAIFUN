@@ -47,6 +47,10 @@ body
 	margin 0
 	animation:  slideInDown  1s 1 ease-in-out;
 	z-index 10
+	bsh()
+	.toolbar-top-wrap
+		+above(1101px)
+			display none
 // animate top menu === end
 
 // error
@@ -299,15 +303,22 @@ body
 
 //.toolbar
 .toolbar-top-wrap
+	+below(1100px)
+		.soc-row
+			display none
 	background: black
 //.main-cont
 .toolbar-top
+	+below(1100px)
+		height: 60px
 	f()
 	height: 75px
 	align-items center
 .logo
 	flex(mid)
 	img
+		+below(1100px)
+			width: 100px
 		width: 140px
 .logo__img
 	margin-right: 10px
@@ -315,6 +326,8 @@ body
 	color white
 	font-size: 9px
 .phone
+	+below(640px)
+		display none
 	margin 0 20px 0 auto
 	f()
 	align-items center
@@ -333,9 +346,13 @@ body
 		color white
 		@extend .type--lg
 .toolbar-order
+	+below(768px)
+		display none
 	margin-left: 5%
 .nav-wrap
 	background: white
+	+below(1100px)
+		display none
 .nav
 	flex(between)
 	height: 75px
@@ -349,6 +366,8 @@ body
 	color $green
 
 .banner
+	+below(1100px)
+		height calc(100vh - 60px)
 	height calc(100vh - 150px)
 	bg-full()
 .slogan-wrap
@@ -357,9 +376,13 @@ body
 	fl()
 	justify-content center
 .slogan
+	+below(1100px)
+		text-align center
 	color white
 	up()
 .slogan__title
+	+below(640px)
+		font-size: 72px
 	font-weight: 700
 	font-size: 96px
 .slogan__title-sub
@@ -388,6 +411,10 @@ body
 		size 14px
 
 .section
+	+below(1024px)
+		padding: 80px 0
+	+below(768px)
+		padding: 60px 0
 	padding: 120px 0
 
 .section--dark
@@ -408,10 +435,32 @@ body
 	@extend .type--xl
 	up()
 	font-weight: 700
-	margin-bottom: 60px
+	@extend .mb-64
 	text-align center
 
+.section-title-sub
+	+below(640px)
+		margin-top: -10px
+		margin-bottom: 40px
+	text-align center
+	margin-top: -40px
+	@extend .mb-64
+
+.section-title-sub--lg
+	@extend .type--lg
+	span
+		@extend .type--xl
+		font-weight: 700
+		display inline-block
+		margin: 0 5px
+// advant
 .advant
+	+below(1100px)
+		display: grid
+		grid-gap 20px
+		grid-template-columns: repeat(3,1fr)
+	+below(640px)
+		grid-template-columns: repeat(2,1fr)
 	flex(between)
 .advant__el
 	flex(mid)
@@ -422,11 +471,14 @@ body
 	margin-bottom: 15px
 .advant__el-text
 	up()
+	text-align center
 	margin-bottom: 10px
 .advant__el-title
+	text-align center
 	@extend .type--lg
 	font-weight: 700
 	up()
+// advant === end
 
 // card
 .card-wrap
@@ -434,10 +486,10 @@ body
 		fw()
 	f()
 	justify-content space-between
-	margin-bottom: 40px
 .card-img
-	+below(768px)
+	+below(640px)
 		width: 100%
+		margin-bottom: 20px
 	width 50%
 	.gallery-slider-wrap
 		margin-top: 0
@@ -450,26 +502,29 @@ body
 	padding: 34% 10%
 	border-right 3px solid black
 .card-descr
+	+below(640px)
+		width: 100%
 	width: 45%
 	margin-left: 5%
 	padding-right: 10px
 // card === end
 
 .book-row
+	+below(640px)
+		font-size: 12px
 	f()
 	fw()
 	align-items: flex-end
 	margin-bottom: 20px
 .book-row__title
-	max-width: 40%
+	max-width: 60%
 .book-row__dot
 	border-bottom 1px dashed #00000017
 	flex-grow 1
 .book-row__value
-	max-width: 40%
-	white-space nowrap
+	max-width: 60%
 	vertical-align: bottom
-
+	text-align: right
 // === убираем выделения активности при клик ===
 .slick-slide
 	&:hover
@@ -487,12 +542,14 @@ body
 //Навигация снаружи
 .slider-wrap--simple
 	.slider-control
+		+below(1280px)
+			display none
 		flex(mid)
 		tr(all)
 		size 40px
 		position: absolute
 		top 50%
-		margin-top: -40px
+		margin-top: -20px
 		z-index 10
 		cp()
 		border 1px solid red
@@ -552,22 +609,29 @@ body
 	.dot
 		+below(720px)
 			flex(mid)
-			size 6px
-		background: $mark
-		width: 20px
-		height: 4px
+		size 10px
 		display: block
-		br(3px)
-		opacity: .5
+		border 1px solid $border-color
 	.slick-active
 		.dot
+			background: white
 			opacity: 1
 //=== Внешний вид пагинации end===
 
+
+.skills-cont
+	max-width 1024px
+	margin-left auto
+	margin-right auto
+	.book-row
+		@extend .type--md
 // tab
 .tab
+	+below(640px)
+		overflow-y auto
 	f()
 	border-bottom 1px solid $border-color
+
 .tab--fluid-modal
 	margin-left -32px
 	margin-right -32px
@@ -577,8 +641,9 @@ body
 		padding-top: 0
 
 .tab__el
-	+below(640px)
+	+below(768px)
 		padding: 10px 10px 12px 10px
+		white-space nowrap
 	flex-grow 1
 	text-align center
 	font-weight: 500
@@ -589,7 +654,7 @@ body
 	cp()
 	width: 100%
 	up()
-	@extend .type--lg
+	@extend .type--md
 	&.active
 		font-weight: 700
 		border-bottom 4px solid $mark
@@ -608,3 +673,297 @@ body
 		left initial
 		position: static
 // tab === end
+
+// why
+.why
+	+below(768px)
+		align-items: stretch
+		justify-content space-between
+	f()
+	justify-content center
+	align-items:baseline
+	fw()
+	@extend .mb-48
+.why__el
+	+below(768px)
+		width: 48%
+		padding: 0
+	f()
+	justify-content flex-start
+	align-items: center
+	fl()
+	width: 25%
+	padding: 0 10px
+	text-align center
+	@extend .mb-24
+.why__el-icon
+	+below(640px)
+		img
+			size 130px 100px
+	@extend .mb-24
+.why__el-text
+	+below(768px)
+		width: 80%
+	+below(640px)
+		font-size: 12px
+	margin-bottom: 10px
+	line-height: 1.6
+.why__el-title
+	+below(640px)
+		font-size: 14px
+		line-height: 1.4
+	@extend .type--lg
+	font-weight: 700
+	up()
+	@extend .mb-16
+// why === end
+
+// video
+.video-wrap
+	position relative
+	padding: 25% 20%
+.video
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+// video === end
+
+// photo
+.photo-list
+	display: grid
+	grid-gap 0
+	grid-template-columns: repeat(3, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.photo-list__el
+	bg-full()
+	padding: 33% 10%
+	background-size 100%
+	tr()
+	&:hover
+		background-size 110%
+// photo === end
+
+// review
+.review__el
+	+below(768px)
+		width: 100%
+	+below(640px)
+		padding: 20px
+	@extend .type--lg
+	padding: 5% 10%
+	border 2px dashed #ffffff4f
+	width: 75%
+	margin: 0 auto
+.review__el-text
+	p
+		@extend .type--lg
+		&:last-child
+			margin-bottom: 0
+	padding-bottom: 20px
+	border-bottom 1px solid #ffffff54
+.review__el-name
+	font-weight: 700
+	margin: 20px 0
+.review__el-location
+	@extend .type--main
+
+// review === end
+
+// deliver
+.deliver-wrap
+	padding: 30px 0
+.deliver
+	+below(1024px)
+		padding: 80px 0
+	+below(768px)
+		padding: 60px 0
+	padding: 120px 0
+	background-size contain
+	background-repeat no-repeat
+	background-position center center
+.deliver-cont
+	flex(mid)
+	fl()
+
+.deliver-title
+	font-weight: 700
+	@extend .type--xl
+	up()
+	margin-bottom: 30px
+.deliver-text
+	font-weight: 700
+	@extend .type--lg
+	up()
+	margin-bottom: 30px
+// deliver === end
+
+// cost
+.cost
+	+below(768px)
+		grid-template-columns: 1fr
+		max-width 480px
+		margin: 0 auto
+		margin-bottom: 32px
+	display: grid
+	grid-gap 20px
+	grid-template-columns: repeat(3, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+.cost__el
+	+below(768px)
+		padding: 10% 5%
+	background: white
+	flex(mid)
+	fl()
+	padding: 20% 5%
+	color black
+	.btn--md
+		margin-top: auto
+.cost__el-cont
+	flex(mid)
+	fl()
+	@extend .mb-32
+.cost__el-img
+	margin-bottom: 20px
+.cost__el-text
+	margin-bottom: 20px
+	text-align center
+.cost__el-cost
+	@extend .type--lg
+	span
+		@extend .type--xl
+		font-weight: 700
+		display inline-block
+		margin: 0 5px
+
+.cost__el-link
+	text-align center
+	color #009aff
+	margin-top: 20px
+	font-weight: 700
+	line-height: 1.6
+
+// cost === end
+
+// partner
+.partner__el-wrap
+	padding: 10px
+.partner__el
+	bg-full()
+	-webkit-filter grayscale(1)
+	tr()
+	background-size:contain
+	padding: 12% 10%
+	&:hover
+		-webkit-filter grayscale(0)
+
+// partner === end
+
+// location
+.location
+	+below(1024px)
+		padding-top: 80px
+	+below(768px)
+		padding-top: 60px
+	padding-top: 120px
+	background: black
+	color white
+.map-wrap
+	position relative
+	width: 100%
+	padding: 15% 10%
+	min-height 400px
+.map
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+	background: #292929
+// location === end
+
+.footer
+	background: black
+	color white
+
+.footer-row-wrap
+	padding: 30px 0
+	&:first-child
+		border-bottom 1px dashed rgba(255,255,255,0.31)
+
+.footer-row
+	flex(between)
+.footer-info
+	max-width 400px
+	line-height: 1.4
+	font-size: 10px
+	p
+		font-size: 10px
+		margin-bottom: 10px
+	a
+		color white
+.footer-info--right
+	text-align: right
+
+// slider menu
+.head-toggle
+	+below(640px)
+		margin-left auto
+	flex(mid)
+	cp()
+	margin-right: 10px
+	+above(1101px)
+		display: none
+	.icon
+		+below(640px)
+			size 20px
+		size 25px
+		fill white
+		margin-left: 40px
+	.icon-close
+		display: none
+
+.head-toggle.slide-block-toggle--open
+	.icon-close
+		display: block
+	.icon-open
+		display: none
+
+.slide-block
+	+below(640px)
+		top 60px
+		height: calc(100% - 60px) // Высота шапки
+	+below(480px)
+		width: 80%
+	position: fixed
+	top 60px // Высота шапки
+	width: 360px
+	tr(all)
+	height: calc(100% - 60px) // Высота шапки
+	z-index 1100
+	background: #232323
+	color white
+.slide-block--left
+	left 0
+	transform translateX(-100%)
+
+.slide-block--right
+	right 0
+	transform translateX(100%)
+
+.slide-block--open
+	transform translateX(0%)
+
+.slide-block-wrap
+	padding: 40px
+	.phone
+		display: flex !important
+.slide-nav__el
+	color white
+	@extend .type--md
+	up()
+	display block
+	margin-bottom: 20px
+	font-weight: 700
+// slider menu === end
