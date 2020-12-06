@@ -272,6 +272,49 @@ include block_html/_include.pug
 		.section#tech
 			.main-cont
 				.section-title Технологии
+				.tech
+					.tech-list
+						.tech-list__el.active(data-item="construction")
+							.tech-list__el-icon
+								+icon("construction","icon")
+							.tech-list__el-text Рама из шведской стали DOCOL
+							.tech-list__el-pin#pinConstruction
+						.tech-list__el(data-item="tire")
+							.tech-list__el-icon
+								+icon("tire","icon")
+							.tech-list__el-text Шины низкого давления 1650 мм
+							.tech-list__el-pin#pinTire
+						.tech-list__el(data-item="engine")
+							.tech-list__el-icon
+								+icon("engine","icon")
+							.tech-list__el-text Турбодизельный двигатель Kubota
+							.tech-list__el-pin#pinEngine
+						.tech-list__el(data-item="paint")
+							.tech-list__el-icon
+								+icon("paint","icon")
+							.tech-list__el-text Алюминиевый сверхлегкий кузов и покраска raptor
+							.tech-list__el-pin#pinPaint
+						.tech-list__el(data-item="gearbox")
+							.tech-list__el-icon
+								+icon("gearbox","icon")
+							.tech-list__el-text Надёжная трансмиссия
+							.tech-list__el-pin#pinGearbox
+					.tech-img
+						.tech-img__el.active(style="background-image:url('img/construction.png')" data-item="construction")
+						.tech-img__el(style="background-image:url('img/tire.png')" data-item="tire")
+						.tech-img__el(style="background-image:url('img/engine.png')" data-item="engine")
+						.tech-img__el(style="background-image:url('img/paint.png')" data-item="paint")
+						.tech-img__el(style="background-image:url('img/gearbox.png')" data-item="gearbox")
+						.tech-point.active.tech-point--construction(data-item="construction")#boxConstruction
+							span
+						.tech-point.tech-point--tire(data-item="tire")#boxTire
+							span
+						.tech-point.tech-point--engine(data-item="engine")#boxEngine
+							span
+						.tech-point.tech-point--paint(data-item="paint")#boxPaint
+							span
+						.tech-point.tech-point--gearbox(data-item="gearbox")#boxGearbox
+							span
 
 		//#video
 		.section.section--dark#video

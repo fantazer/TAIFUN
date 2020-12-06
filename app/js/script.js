@@ -1,8 +1,6 @@
 $(document).ready(function () {
 
-	// nice select
-	//$('.select-beauty').niceSelect();
-	// nice select === end
+
 
 	//modals
 	var modalState = {
@@ -184,7 +182,7 @@ $(document).ready(function () {
 		});
 	})
 	// gallery === end
-	
+
 	// review slider
 	$('.slider-review').slick({
 		slidesToShow: 1,
@@ -264,4 +262,92 @@ $(document).ready(function () {
 		$(this).toggleClass('slide-block-toggle--open');
 	});
 	// slide menu === end
+
+	// tech constructor
+	if($(window).widht > 961){
+	setTimeout(function(){
+	
+	// tech constructor === end
+	var configShow = {
+		color: '#34b525',
+		size:4,
+		path:'grid',
+		startPlug: 'square',
+		endPlug: 'behind',
+	}
+	var config = {
+		color: '#34b525',
+		size:4,
+		path:'grid',
+		startPlug: 'square',
+		endPlug: 'behind',
+		'hide':true
+	}
+
+	var construction = new LeaderLine(
+		document.getElementById('pinConstruction'),
+		document.getElementById('boxConstruction'),
+		configShow
+	)
+	construction.nameLine = 'construction';
+	var tire = new LeaderLine(
+		document.getElementById('pinTire'),
+		document.getElementById('boxTire'),
+		config
+	)
+	tire.nameLine = 'tire';
+	var engine = new LeaderLine(
+		document.getElementById('pinEngine'),
+		document.getElementById('boxEngine'),
+		config
+	)
+	engine.nameLine = 'engine';
+	var paint = new LeaderLine(
+		document.getElementById('pinPaint'),
+		document.getElementById('boxPaint'),
+		config
+	)
+	paint.nameLine = 'paint';
+	var gearbox = new LeaderLine(
+		document.getElementById('pinGearbox'),
+		document.getElementById('boxGearbox'),
+		config
+	)
+	gearbox.nameLine = 'gearbox';
+	var lineArray = [construction,tire,engine,paint,gearbox]
+	
+	var techConstuctor = function(value){
+		var listItem = ['.tech-list__el','.tech-img__el','.tech-point']
+		listItem.forEach(function(item){
+			$(item).each(function(){
+				if($(this).data('item') != value){
+					$(this).removeClass('active')
+				}else{
+						$(this).addClass('active')
+				}
+			})
+		})
+
+	}
+	console.log(engine);
+	$('.tech-list__el').add('.tech-point').click(function(){
+		var current = $(this).data('item');
+		techConstuctor(current)
+		lineArray.forEach(function(item){
+			//console.log(item.nameLine);
+			if(item.nameLine == current ){
+				item.show({
+				})
+			}else{
+				item.hide({
+				})
+			}
+		})
+	});
+	
+	
+	},10)
+	}
+
 });
+

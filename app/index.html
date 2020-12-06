@@ -729,6 +729,77 @@
             <div class="section" id="tech">
                 <div class="main-cont">
                     <div class="section-title">Технологии</div>
+                    <div class="tech">
+                        <div class="tech-list">
+                            <div class="tech-list__el active" data-item="construction">
+                                <div class="tech-list__el-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#construction"></use>
+                                    </svg>
+                                </div>
+                                <div class="tech-list__el-text">Рама из шведской стали DOCOL</div>
+                                <div class="tech-list__el-pin" id="pinConstruction"></div>
+                            </div>
+                            <div class="tech-list__el" data-item="tire">
+                                <div class="tech-list__el-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#tire"></use>
+                                    </svg>
+                                </div>
+                                <div class="tech-list__el-text">Шины низкого давления 1650 мм</div>
+                                <div class="tech-list__el-pin" id="pinTire"></div>
+                            </div>
+                            <div class="tech-list__el" data-item="engine">
+                                <div class="tech-list__el-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#engine"></use>
+                                    </svg>
+                                </div>
+                                <div class="tech-list__el-text">Турбодизельный двигатель Kubota</div>
+                                <div class="tech-list__el-pin" id="pinEngine"></div>
+                            </div>
+                            <div class="tech-list__el" data-item="paint">
+                                <div class="tech-list__el-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#paint"></use>
+                                    </svg>
+                                </div>
+                                <div class="tech-list__el-text">Алюминиевый сверхлегкий кузов и покраска raptor</div>
+                                <div class="tech-list__el-pin" id="pinPaint"></div>
+                            </div>
+                            <div class="tech-list__el" data-item="gearbox">
+                                <div class="tech-list__el-icon">
+                                    <svg class="icon">
+                                        <use xlink:href="#gearbox"></use>
+                                    </svg>
+                                </div>
+                                <div class="tech-list__el-text">Надёжная трансмиссия</div>
+                                <div class="tech-list__el-pin" id="pinGearbox"></div>
+                            </div>
+                        </div>
+                        <div class="tech-img">
+                            <div class="tech-img__el active" style="background-image:url('img/construction.png')" data-item="construction"></div>
+                            <div class="tech-img__el" style="background-image:url('img/tire.png')" data-item="tire"></div>
+                            <div class="tech-img__el" style="background-image:url('img/engine.png')" data-item="engine"></div>
+                            <div class="tech-img__el" style="background-image:url('img/paint.png')" data-item="paint"></div>
+                            <div class="tech-img__el" style="background-image:url('img/gearbox.png')" data-item="gearbox"></div>
+                            <div class="tech-point active tech-point--construction" data-item="construction" id="boxConstruction">
+                                <span></span>
+                            </div>
+                            <div class="tech-point tech-point--tire" data-item="tire" id="boxTire">
+                                <span></span>
+                            </div>
+                            <div class="tech-point tech-point--engine" data-item="engine" id="boxEngine">
+                                <span></span>
+                            </div>
+                            <div class="tech-point tech-point--paint" data-item="paint" id="boxPaint">
+                                <span></span>
+                            </div>
+                            <div class="tech-point tech-point--gearbox" data-item="gearbox" id="boxGearbox">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--#video-->
@@ -1090,6 +1161,7 @@
     <script src="bower/slick-carousel/slick/slick.js"></script>
     <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
     <script src="bower/fancybox/dist/jquery.fancybox.js"></script>
+    <script src="./js/leader-line.min.js"></script>
     <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>

@@ -967,3 +967,112 @@ body
 	margin-bottom: 20px
 	font-weight: 700
 // slider menu === end
+
+.tech
+	+below(960px)
+		fw()
+	f()
+	justify-content space-between
+.tech-list
+	+below(960px)
+		width: 100%
+		display: grid
+		grid-gap 20px
+		grid-template-columns: repeat(3, 1fr)
+		//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+	+below(768px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: 1fr
+	width: 30%
+.tech-list__el
+	+below(960px)
+		border 1px solid black
+	f()
+	margin-bottom: 10px
+	border 1px solid transparent
+	padding: 20px
+	align-items center
+	cp()
+	tr()
+	position relative
+	&:hover
+		border 1px solid black
+	&.active
+		border 1px solid black
+
+.tech-list__el-icon
+	margin-right: 25px
+	.icon
+		size 70px
+.tech-list__el-text
+	+below(1200px)
+		font-size: 16px
+	@extend .type--lg
+.tech-img
+	+below(960px)
+		display none
+	width: 65%
+	position relative
+.tech-img__el
+	bg-full()
+	position absolute
+	left -9999px
+	opacity: 0
+	padding: 40% 10%
+	background-size contain
+	transition opacity .6s,  transform .6s
+	transform scale(.9)
+	&.active
+		transform scale(1)
+		position: static
+		left initial
+		opacity: 1
+
+.tech-point
+	position absolute
+	background: black
+	border 1px solid white
+	padding: 4px
+	cp()
+	span
+		size 10px
+		display block
+		background: black
+		tr()
+	&:hover
+		span
+			background: green
+	&.active
+		span
+			background: green
+.tech-point--construction
+	right: 40%
+	top 40%
+
+.tech-point--tire
+	left 18%
+	bottom 50%
+
+.tech-point--engine
+	+below(1200px)
+		bottom 55%
+	left 40%
+	bottom 40%
+
+.tech-point--paint
+	right: 25%
+	top 25%
+
+.tech-point--gearbox
+	bottom 45%
+	right: 45%
+
+.tech-list__el-pin
+	position absolute
+	size 0px
+	background: black
+	top calc(50%)
+	right: 0px
+
+
