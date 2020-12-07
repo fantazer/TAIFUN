@@ -132,7 +132,7 @@ $(document).ready(function () {
 
 
 	// scroll to id
-	var offsetId = $(document).width() < 769 ? 100 : 58
+	var offsetId = $(document).width() < 769 ? 50 : 58
 	$("a[rel='m_PageScroll2id']").mPageScroll2id({
 		offset: offsetId,
 		highlightClass: "nav__el--active",
@@ -201,7 +201,6 @@ $(document).ready(function () {
 	$('.slider-partner').slick({
 		slidesToShow: 5,
 		speed: 500,
-		dots:true,
 		arrows: false,
 		customPaging : function(slider, i) {
 			return '<span class="dot"></span>';
@@ -264,7 +263,7 @@ $(document).ready(function () {
 	// slide menu === end
 
 	// tech constructor
-	if($(window).widht > 961){
+	if($(window).width() > 961){
 	setTimeout(function(){
 	
 	// tech constructor === end

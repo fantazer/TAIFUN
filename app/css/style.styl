@@ -133,7 +133,6 @@ body
 	background: white
 	position: relative
 	padding: 40px 45px
-	br(40px)
 
 .modal__show
 	max-height 100%
@@ -151,11 +150,10 @@ body
 		top 12px
 		right 12px
 	position: absolute
-	top: 20px
-	right: 20px
+	top: 0px
+	right: 0px
 	cp()
 	size 50px
-	br(20px)
 	flex(mid)
 	z-index 10
 	background: #f8f8f8
@@ -194,7 +192,8 @@ body
 		font-size: 20px
 	margin-bottom: 20px
 	text-align: center
-	@extend .type--xl
+	up()
+	font-size: 24px
 	font-weight: 700
 
 .modal-text

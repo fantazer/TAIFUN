@@ -18,7 +18,7 @@ include block_html/_include.pug
 						a(href="#").soc-row__el
 							+icon("soc-vk","icon")
 					.toolbar-order
-						.btn--sm.btn--white Оставить заявку
+						.btn--sm.btn--white.modal-get(data-modal="order") Оставить заявку
 					.head-toggle.js-slide-block-toggle(data-menu="menu")
 						+icon("menu","icon icon-open")
 						+icon("close","icon icon-close")
@@ -27,7 +27,7 @@ include block_html/_include.pug
 				.slide-nav.mb-32
 					-
 						var items = [
-							{name: "главная", id: "#main"},
+							//{name: "главная", id: "#main"},
 							{name: "модели", id: "#model"},
 							{name: "характеристики", id: "#skills"},
 							{name: "почему тайфун", id: "#why"},
@@ -42,13 +42,13 @@ include block_html/_include.pug
 				a(href="tel:+7 812 629-15-55").phone
 					+icon("phone","icon")
 					span +7 812 629-15-55
-				.btn--sm.btn--white.mt-24 Оставить заявку
+				.btn--sm.btn--white.mt-24.modal-get(data-modal="order") Оставить заявку
 		.nav-wrap.nav-wrap--top
 			.main-cont
 				.nav
 					-
 						var items = [
-							{name: "главная", id: "#main"},
+							//{name: "главная", id: "#main"},
 							{name: "модели", id: "#model"},
 							{name: "характеристики", id: "#skills"},
 							{name: "почему тайфун", id: "#why"},
@@ -217,8 +217,8 @@ include block_html/_include.pug
 									.book-row__dot
 									.book-row__value #{item.val}
 					.btn-row.btn-row--line.btn-row--mid
-						.btn--md.btn--light.btn--mobile узнать стоимость
-						.btn--md.btn--light.btn--mobile скачать комплектации и цены
+						.btn--md.btn--light.btn--mobile.modal-get(data-modal="order") узнать стоимость
+						a(href="#").btn--md.btn--light.btn--mobile скачать комплектации и цены
 
 		//#why
 		.section.section--dark#why
@@ -266,7 +266,7 @@ include block_html/_include.pug
 							.why__el-title #{item.title}
 							.why__el-text #{item.text}
 				.btn-row.btn-row--line.btn-row--mid
-					.btn--md.btn--white запись на тест-драйв
+					.btn--md.btn--white.modal-get(data-modal="subscribe") запись на тест-драйв
 
 		//#tech
 		.section#tech
@@ -373,7 +373,7 @@ include block_html/_include.pug
 				.deliver-cont
 					.deliver-title доставка
 					.deliver-text в любою точку россии <br> и ближнего зарубежья
-					.btn--md.btn--light рассчитать стоимость
+					.btn--md.btn--light.modal-get(data-modal="order") рассчитать стоимость
 
 		.section.section--dark
 			.main-cont
@@ -387,21 +387,21 @@ include block_html/_include.pug
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>40 000</span> руб.
 							a(href="#").cost__el-link Вам доступно более <br> 20 предложений
-						.btn--md.btn--light Оставить заявку
+						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
 					.cost__el
 						.cost__el-cont
 							.cost__el-img
 								img(src="img/car.svg", alt="")
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>60 000</span> руб.
-						.btn--md.btn--light Оставить заявку
+						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
 					.cost__el
 						.cost__el-cont
 							.cost__el-img
 								img(src="img/car.svg", alt="")
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>100 000</span> руб.
-						.btn--md.btn--light Оставить заявку
+						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
 
 				.type--lg.type--bold.type--center.mb-48 Банки партнеры
 
@@ -448,13 +448,13 @@ include block_html/_include.pug
 						a(href="#").soc-row__el
 							+icon("soc-vk","icon")
 					.toolbar-order
-						.btn--sm.btn--white Оставить заявку
+						.btn--sm.btn--white.modal-get(data-modal="order") Оставить заявку
 		.nav-wrap
 			.main-cont
 				.nav
 					-
 						var items = [
-							{name: "главная", id: "#main"},
+							//{name: "главная", id: "#main"},
 							{name: "модели", id: "#model"},
 							{name: "характеристики", id: "#skills"},
 							{name: "почему тайфун", id: "#why"},
@@ -485,4 +485,51 @@ include block_html/_include.pug
 					.footer-info.footer-info--right.text
 						p Вся представленная на сайте информация носит информационный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Цены, условия приобретения, спецпредложения, технические характеристики и комплектации вездеходов, указанные на сайте, приведены для примера и могут быть изменены в любое время без предварительного уведомления.
 
+	//modal
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="order")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Оставьте заявку
+					form
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Телефон" class="input")
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности]
+						input(type="submit" value="Отправить заявку").modal-send
+			.modal(data-modal="subscribe")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Записаться на <br> тест-драйв
+					form
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Телефон" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Дата" class="input")
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности]
+						input(type="submit" value="Отправить заявку").modal-send
 include ./block_html/_script.pug
