@@ -345,7 +345,7 @@ $(document).ready(function () {
 	});
 	
 	
-	},10)
+	},200)
 	}
 
 });
