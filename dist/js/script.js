@@ -190,7 +190,7 @@ $(document).ready(function () {
 		dots:true,
 		arrows: false,
 		focusOnSelect: true,
-		adaptiveHeight:true,
+		//adaptiveHeight:true,
 		customPaging : function(slider, i) {
 			return '<span class="dot"></span>';
 		}
@@ -347,6 +347,18 @@ $(document).ready(function () {
 	
 	},200)
 	}
+
+
+	// animate on scroll
+	AOS.init({
+ 		offset: 300,
+		 disable: 'mobile',
+		 disable: function () {
+				var maxWidth = 1024;
+				return window.innerWidth < maxWidth;
+			}
+	});
+	// animate on scroll === end
 
 });
 

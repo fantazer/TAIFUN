@@ -663,7 +663,7 @@ body
 	left -9999px
 	visibility: hidden
 	position absolute
-	transform translateY(-10px)
+	transform translateY(10px)
 	transition opacity .6s, transform .6s
 	&.active
 		transform translateY(0px)
@@ -817,14 +817,24 @@ body
 	fl()
 	padding: 20% 5%
 	color black
+	cp()
 	.btn--md
 		margin-top: auto
+	&:hover
+		.cost__el-link
+			opacity: 1
+		.car--color
+			display block
+		.car--black
+			display none
 .cost__el-cont
 	flex(mid)
 	fl()
 	@extend .mb-32
 .cost__el-img
 	margin-bottom: 20px
+	.car--color
+		display none
 .cost__el-text
 	margin-bottom: 20px
 	text-align center
@@ -842,7 +852,8 @@ body
 	margin-top: 20px
 	font-weight: 700
 	line-height: 1.6
-
+	opacity: 0
+	tr()
 // cost === end
 
 // partner
@@ -892,8 +903,12 @@ body
 		border-bottom 1px dashed rgba(255,255,255,0.31)
 
 .footer-row
+	+below(640px)
+		fw()
 	flex(between)
 .footer-info
+	+below(640px)
+		margin-bottom: 20px
 	max-width 400px
 	line-height: 1.4
 	font-size: 10px
@@ -903,6 +918,8 @@ body
 	a
 		color white
 .footer-info--right
+	+below(640px)
+		text-align: left
 	text-align: right
 
 // slider menu
@@ -1075,3 +1092,7 @@ body
 	right: 0px
 
 
+.slider-review
+	.slick-track
+		f()
+		align-items center

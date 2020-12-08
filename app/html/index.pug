@@ -91,50 +91,40 @@ include block_html/_include.pug
 		//#model
 		.section.section--dark#model
 			.main-cont
-				.section-title модели
-				.slider-wrap.slider-wrap--simple
-					.slider-control.slider-control--left
-						+icon("arrow-left-coner","icon")
-					.slider-control.slider-control--right
-						+icon("arrow-right-coner","icon")
-					.slider-item.slider-card
-						- for (var i=0;i<4;i++)
-							.slider-card__el
-								.card-wrap
-									.card-img
-										.gallery-slider-wrap
-											.gallery-slider
-												.gallery__el(style="background-image:url('img/model-1.jpg')")
-												.gallery__el(style="background-image:url('img/model-2.jpg')")
-												.gallery__el(style="background-image:url('img/model-3.jpg')")
-											.gallery-slider-nav
-												.gallery__el-nav-wrap
-													.gallery__el-nav(style="background-image:url('img/model-1.jpg')")
-												.gallery__el-nav-wrap
-													.gallery__el-nav(style="background-image:url('img/model-2.jpg')")
-												.gallery__el-nav-wrap
-													.gallery__el-nav(style="background-image:url('img/model-3.jpg')")
+				.card-wrap
+					.card-img
+						.gallery-slider-wrap
+							.gallery-slider
+								.gallery__el(style="background-image:url('img/model-1.jpg')")
+								.gallery__el(style="background-image:url('img/model-2.jpg')")
+								.gallery__el(style="background-image:url('img/model-3.jpg')")
+							.gallery-slider-nav
+								.gallery__el-nav-wrap
+									.gallery__el-nav(style="background-image:url('img/model-1.jpg')")
+								.gallery__el-nav-wrap
+									.gallery__el-nav(style="background-image:url('img/model-2.jpg')")
+								.gallery__el-nav-wrap
+									.gallery__el-nav(style="background-image:url('img/model-3.jpg')")
 
-									.card-descr
-										.title.type--bold.type--lgx.mb-32 «тайфун» rx-387-20
-										.title.type--lg.mb-24 Технические Преимущества
+					.card-descr
+						.title.type--lg.mb-24 Технические Преимущества
 
-										-
-											var items = [
-												{'name': 'Вес:', 'val': '1 620 кг'},
-												{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-												{'name': 'Трансмссия:', 'val': 'от танка'},
-												{'name': 'Колеса:', 'val': '1 650 мм'},
-												{'name': 'Привод:', 'val': 'карданная передача'},
-												{'name': 'Габариты:', 'val': '3 880мм / 2 500мм / 2 480мм'},
-												{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-												{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-											];
-										each item in items
-											.book-row
-												.book-row__title #{item.name}
-												.book-row__dot
-												.book-row__value #{item.val}
+						-
+							var items = [
+								{'name': 'Вес:', 'val': '1 620 кг'},
+								{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+								{'name': 'Трансмссия:', 'val': 'от танка'},
+								{'name': 'Колеса:', 'val': '1 650 мм'},
+								{'name': 'Привод:', 'val': 'карданная передача'},
+								{'name': 'Габариты:', 'val': '3 880мм / 2 500мм / 2 480мм'},
+								{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+								{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
+							];
+						each item in items
+							.book-row
+								.book-row__title #{item.name}
+								.book-row__dot
+								.book-row__value #{item.val}
 		//#skills
 		.section#skills
 			.main-cont
@@ -146,76 +136,68 @@ include block_html/_include.pug
 							.tab__el.js-tick.js-tab Двигатель
 							.tab__el.js-tick.js-tab Трансмиссия
 							.tab__el.js-tick.js-tab масса и габариты
-						.tab-cont.js-tab-cont.active
-							-
-								var items = [
-									{'name': 'Вес:', 'val': '1 620 кг'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Трансмссия:', 'val': 'от танка'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Привод:', 'val': 'карданная передача'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-								];
-							each item in items
-								.book-row
-									.book-row__title #{item.name}
-									.book-row__dot
-									.book-row__value #{item.val}
-						.tab-cont.js-tab-cont
-							-
-								var items = [
-									{'name': 'Вес:', 'val': '1 620 кг'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Трансмссия:', 'val': 'от танка'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Привод:', 'val': 'карданная передача'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-								];
-							each item in items
-								.book-row
-									.book-row__title #{item.name}
-									.book-row__dot
-									.book-row__value #{item.val}
-						.tab-cont.js-tab-cont
-							-
-								var items = [
-									{'name': 'Вес:', 'val': '1 620 кг'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Трансмссия:', 'val': 'от танка'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-								];
-							each item in items
-								.book-row
-									.book-row__title #{item.name}
-									.book-row__dot
-									.book-row__value #{item.val}
-						.tab-cont.js-tab-cont
-							-
-								var items = [
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Трансмссия:', 'val': 'от танка'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Привод:', 'val': 'карданная передача'},
-									{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Колеса:', 'val': '1 650 мм'},
-									{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
-									{'name': 'Двигатель:', 'val': 'Япония, Kubota'},
-								];
-							each item in items
-								.book-row
-									.book-row__title #{item.name}
-									.book-row__dot
-									.book-row__value #{item.val}
+						.tab-cont-wrap
+							.tab-cont.js-tab-cont.active
+								-
+									var items = [
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Трансмссия:', 'val': 'от танка'},
+										{'name': 'Колеса:', 'val': '1 650 мм'},
+										{'name': 'Привод:', 'val': 'карданная передача'},
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									];
+								each item in items
+									.book-row
+										.book-row__title #{item.name}
+										.book-row__dot
+										.book-row__value #{item.val}
+							.tab-cont.js-tab-cont
+								-
+									var items = [
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Трансмссия:', 'val': 'от танка'},
+										{'name': 'Колеса:', 'val': '1 650 мм'},
+										{'name': 'Привод:', 'val': 'карданная передача'},
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									];
+								each item in items
+									.book-row
+										.book-row__title #{item.name}
+										.book-row__dot
+										.book-row__value #{item.val}
+							.tab-cont.js-tab-cont
+								-
+									var items = [
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Трансмссия:', 'val': 'от танка'},
+										{'name': 'Колеса:', 'val': '1 650 мм'},
+										{'name': 'Привод:', 'val': 'карданная передача'},
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+									];
+								each item in items
+									.book-row
+										.book-row__title #{item.name}
+										.book-row__dot
+										.book-row__value #{item.val}
+							.tab-cont.js-tab-cont
+								-
+									var items = [
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Трансмссия:', 'val': 'от танка'},
+										{'name': 'Колеса:', 'val': '1 650 мм'},
+										{'name': 'Привод:', 'val': 'карданная передача'},
+										{'name': 'Грузоподъемность:', 'val': '1 300 кг'},
+										{'name': 'Управление: джойстиком', 'val': 'джойстиком'},
+
+									];
+								each item in items
+									.book-row
+										.book-row__title #{item.name}
+										.book-row__dot
+										.book-row__value #{item.val}
 					.btn-row.btn-row--line.btn-row--mid
 						.btn--md.btn--light.btn--mobile.modal-get(data-modal="order") узнать стоимость
 						a(href="#").btn--md.btn--light.btn--mobile скачать комплектации и цены
@@ -369,39 +351,44 @@ include block_html/_include.pug
 								.review__el-location Интернет издание  «Вездеходы России»
 
 		.deliver-wrap#deliver
-			.deliver(style="background-image:url('img/country.svg')")
+			.deliver(data-modal="order" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" style="background-image:url('img/country.svg')")
 				.deliver-cont
-					.deliver-title доставка
-					.deliver-text в любою точку россии <br> и ближнего зарубежья
-					.btn--md.btn--light.modal-get(data-modal="order") рассчитать стоимость
+					.deliver-title(data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000") доставка
+					.deliver-text(data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000") в любою точку россии <br> и ближнего зарубежья
+					.btn--md.btn--light.modal-get(data-modal="calc" data-aos="zoom-in" data-aos-delay="1600" data-aos-duration="1000") рассчитать стоимость
 
 		.section.section--dark
 			.main-cont
 				.section-title лизинг
 				.section-title-sub.section-title-sub--lg Процентная ставка <span>5,5%</span> Возврат НДС: <span>20%</span>
 				.cost.mb-64
-					.cost__el
+					.cost__el.modal-get(data-modal="order")
 						.cost__el-cont
 							.cost__el-img
-								img(src="img/car.svg", alt="")
+								img(src="img/car.svg", alt="").car--black
+								img(src="img/car-mark.svg", alt="").car--color
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>40 000</span> руб.
 							a(href="#").cost__el-link Вам доступно более <br> 20 предложений
-						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
-					.cost__el
+						.btn--md.btn--light Оставить заявку
+					.cost__el.modal-get(data-modal="order")
 						.cost__el-cont
 							.cost__el-img
-								img(src="img/car.svg", alt="")
+								img(src="img/car.svg", alt="").car--black
+								img(src="img/car-mark.svg", alt="").car--color
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>60 000</span> руб.
-						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
-					.cost__el
+							a(href="#").cost__el-link Вам доступно более <br> 20 предложений
+						.btn--md.btn--light Оставить заявку
+					.cost__el.modal-get(data-modal="order")
 						.cost__el-cont
 							.cost__el-img
-								img(src="img/car.svg", alt="")
+								img(src="img/car.svg", alt="").car--black
+								img(src="img/car-mark.svg", alt="").car--color
 							.cost__el-text ежемесячный платёж
 							.cost__el-cost до <span>100 000</span> руб.
-						.btn--md.btn--light.modal-get(data-modal="order") Оставить заявку
+							a(href="#").cost__el-link Вам доступно более <br> 20 предложений
+						.btn--md.btn--light Оставить заявку
 
 				.type--lg.type--bold.type--center.mb-48 Банки партнеры
 
@@ -524,6 +511,29 @@ include block_html/_include.pug
 						.input-cont
 							.input-row
 								input(type="text" placeholder="Дата" class="input")
+						.login-remember
+							.check-el
+								label.style-label.style-label--checkbox
+									input(type="checkbox").style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Я ознакомился с #[a(href="#") политикой конфиденциальности]
+						input(type="submit" value="Отправить заявку").modal-send
+			.modal(data-modal="calc")
+				.modal-content
+					.modal-close
+						+icon("close","icon")
+					.modal-title Расчитать стоимость
+					form
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Ваше имя" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Телефон" class="input")
+						.input-cont
+							.input-row
+								input(type="text" placeholder="Город" class="input")
 						.login-remember
 							.check-el
 								label.style-label.style-label--checkbox

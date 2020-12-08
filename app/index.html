@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="bower/slick-carousel/slick/slick-theme.css" />
     <link rel="stylesheet" href="bower/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="bower/aos/dist/aos.css" />
     <!--endbuild-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style-edit.css" />
@@ -182,290 +183,68 @@
             <!--#model-->
             <div class="section section--dark" id="model">
                 <div class="main-cont">
-                    <div class="section-title">модели</div>
-                    <div class="slider-wrap slider-wrap--simple">
-                        <div class="slider-control slider-control--left">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-left-coner"></use>
-                            </svg>
+                    <div class="card-wrap">
+                        <div class="card-img">
+                            <div class="gallery-slider-wrap">
+                                <div class="gallery-slider">
+                                    <div class="gallery__el" style="background-image:url('img/model-1.jpg')"></div>
+                                    <div class="gallery__el" style="background-image:url('img/model-2.jpg')"></div>
+                                    <div class="gallery__el" style="background-image:url('img/model-3.jpg')"></div>
+                                </div>
+                                <div class="gallery-slider-nav">
+                                    <div class="gallery__el-nav-wrap">
+                                        <div class="gallery__el-nav" style="background-image:url('img/model-1.jpg')"></div>
+                                    </div>
+                                    <div class="gallery__el-nav-wrap">
+                                        <div class="gallery__el-nav" style="background-image:url('img/model-2.jpg')"></div>
+                                    </div>
+                                    <div class="gallery__el-nav-wrap">
+                                        <div class="gallery__el-nav" style="background-image:url('img/model-3.jpg')"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="slider-control slider-control--right">
-                            <svg class="icon">
-                                <use xlink:href="#arrow-right-coner"></use>
-                            </svg>
-                        </div>
-                        <div class="slider-item slider-card">
-                            <div class="slider-card__el">
-                                <div class="card-wrap">
-                                    <div class="card-img">
-                                        <div class="gallery-slider-wrap">
-                                            <div class="gallery-slider">
-                                                <div class="gallery__el" style="background-image:url('img/model-1.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-2.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-3.jpg')"></div>
-                                            </div>
-                                            <div class="gallery-slider-nav">
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-1.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-2.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-3.jpg')"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-descr">
-                                        <div class="title type--bold type--lgx mb-32">«тайфун» rx-387-20</div>
-                                        <div class="title type--lg mb-24">Технические Преимущества</div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Вес:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 620 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Грузоподъемность:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 300 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Трансмссия:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">от танка</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Колеса:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 650 мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Привод:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">карданная передача</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Габариты:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">3 880мм / 2 500мм / 2 480мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Управление: джойстиком</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">джойстиком</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Двигатель:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">Япония, Kubota</div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card-descr">
+                            <div class="title type--lg mb-24">Технические Преимущества</div>
+                            <div class="book-row">
+                                <div class="book-row__title">Вес:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">1 620 кг</div>
                             </div>
-                            <div class="slider-card__el">
-                                <div class="card-wrap">
-                                    <div class="card-img">
-                                        <div class="gallery-slider-wrap">
-                                            <div class="gallery-slider">
-                                                <div class="gallery__el" style="background-image:url('img/model-1.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-2.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-3.jpg')"></div>
-                                            </div>
-                                            <div class="gallery-slider-nav">
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-1.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-2.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-3.jpg')"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-descr">
-                                        <div class="title type--bold type--lgx mb-32">«тайфун» rx-387-20</div>
-                                        <div class="title type--lg mb-24">Технические Преимущества</div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Вес:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 620 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Грузоподъемность:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 300 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Трансмссия:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">от танка</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Колеса:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 650 мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Привод:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">карданная передача</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Габариты:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">3 880мм / 2 500мм / 2 480мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Управление: джойстиком</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">джойстиком</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Двигатель:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">Япония, Kubota</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Грузоподъемность:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">1 300 кг</div>
                             </div>
-                            <div class="slider-card__el">
-                                <div class="card-wrap">
-                                    <div class="card-img">
-                                        <div class="gallery-slider-wrap">
-                                            <div class="gallery-slider">
-                                                <div class="gallery__el" style="background-image:url('img/model-1.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-2.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-3.jpg')"></div>
-                                            </div>
-                                            <div class="gallery-slider-nav">
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-1.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-2.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-3.jpg')"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-descr">
-                                        <div class="title type--bold type--lgx mb-32">«тайфун» rx-387-20</div>
-                                        <div class="title type--lg mb-24">Технические Преимущества</div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Вес:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 620 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Грузоподъемность:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 300 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Трансмссия:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">от танка</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Колеса:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 650 мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Привод:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">карданная передача</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Габариты:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">3 880мм / 2 500мм / 2 480мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Управление: джойстиком</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">джойстиком</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Двигатель:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">Япония, Kubota</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Трансмссия:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">от танка</div>
                             </div>
-                            <div class="slider-card__el">
-                                <div class="card-wrap">
-                                    <div class="card-img">
-                                        <div class="gallery-slider-wrap">
-                                            <div class="gallery-slider">
-                                                <div class="gallery__el" style="background-image:url('img/model-1.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-2.jpg')"></div>
-                                                <div class="gallery__el" style="background-image:url('img/model-3.jpg')"></div>
-                                            </div>
-                                            <div class="gallery-slider-nav">
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-1.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-2.jpg')"></div>
-                                                </div>
-                                                <div class="gallery__el-nav-wrap">
-                                                    <div class="gallery__el-nav" style="background-image:url('img/model-3.jpg')"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-descr">
-                                        <div class="title type--bold type--lgx mb-32">«тайфун» rx-387-20</div>
-                                        <div class="title type--lg mb-24">Технические Преимущества</div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Вес:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 620 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Грузоподъемность:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 300 кг</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Трансмссия:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">от танка</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Колеса:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">1 650 мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Привод:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">карданная передача</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Габариты:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">3 880мм / 2 500мм / 2 480мм</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Управление: джойстиком</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">джойстиком</div>
-                                        </div>
-                                        <div class="book-row">
-                                            <div class="book-row__title">Двигатель:</div>
-                                            <div class="book-row__dot"></div>
-                                            <div class="book-row__value">Япония, Kubota</div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Колеса:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">1 650 мм</div>
+                            </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Привод:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">карданная передача</div>
+                            </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Габариты:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">3 880мм / 2 500мм / 2 480мм</div>
+                            </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Управление: джойстиком</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">джойстиком</div>
+                            </div>
+                            <div class="book-row">
+                                <div class="book-row__title">Двигатель:</div>
+                                <div class="book-row__dot"></div>
+                                <div class="book-row__value">Япония, Kubota</div>
                             </div>
                         </div>
                     </div>
@@ -483,182 +262,134 @@
                                 <div class="tab__el js-tick js-tab">Трансмиссия</div>
                                 <div class="tab__el js-tick js-tab">масса и габариты</div>
                             </div>
-                            <div class="tab-cont js-tab-cont active">
-                                <div class="book-row">
-                                    <div class="book-row__title">Вес:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 620 кг</div>
+                            <div class="tab-cont-wrap">
+                                <div class="tab-cont js-tab-cont active">
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Трансмссия:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">от танка</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Колеса:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 650 мм</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Привод:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">карданная передача</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Управление: джойстиком</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">джойстиком</div>
+                                    </div>
                                 </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
+                                <div class="tab-cont js-tab-cont">
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Трансмссия:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">от танка</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Колеса:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 650 мм</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Привод:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">карданная передача</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Управление: джойстиком</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">джойстиком</div>
+                                    </div>
                                 </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Трансмссия:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">от танка</div>
+                                <div class="tab-cont js-tab-cont">
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Трансмссия:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">от танка</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Колеса:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 650 мм</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Привод:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">карданная передача</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Управление: джойстиком</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">джойстиком</div>
+                                    </div>
                                 </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Привод:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">карданная передача</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Двигатель:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">Япония, Kubota</div>
-                                </div>
-                            </div>
-                            <div class="tab-cont js-tab-cont">
-                                <div class="book-row">
-                                    <div class="book-row__title">Вес:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 620 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Трансмссия:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">от танка</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Привод:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">карданная передача</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Двигатель:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">Япония, Kubota</div>
-                                </div>
-                            </div>
-                            <div class="tab-cont js-tab-cont">
-                                <div class="book-row">
-                                    <div class="book-row__title">Вес:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 620 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Трансмссия:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">от танка</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Двигатель:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">Япония, Kubota</div>
-                                </div>
-                            </div>
-                            <div class="tab-cont js-tab-cont">
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Трансмссия:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">от танка</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Привод:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">карданная передача</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Грузоподъемность:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 300 кг</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Колеса:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">1 650 мм</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Управление: джойстиком</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">джойстиком</div>
-                                </div>
-                                <div class="book-row">
-                                    <div class="book-row__title">Двигатель:</div>
-                                    <div class="book-row__dot"></div>
-                                    <div class="book-row__value">Япония, Kubota</div>
+                                <div class="tab-cont js-tab-cont">
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Трансмссия:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">от танка</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Колеса:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 650 мм</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Привод:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">карданная передача</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Грузоподъемность:</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">1 300 кг</div>
+                                    </div>
+                                    <div class="book-row">
+                                        <div class="book-row__title">Управление: джойстиком</div>
+                                        <div class="book-row__dot"></div>
+                                        <div class="book-row__value">джойстиком</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -918,12 +649,12 @@
                 </div>
             </div>
             <div class="deliver-wrap" id="deliver">
-                <div class="deliver" style="background-image:url('img/country.svg')">
+                <div class="deliver" data-modal="order" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000" style="background-image:url('img/country.svg')">
                     <div class="deliver-cont">
-                        <div class="deliver-title">доставка</div>
-                        <div class="deliver-text">в любою точку россии
+                        <div class="deliver-title" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">доставка</div>
+                        <div class="deliver-text" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">в любою точку россии
                             <br>и ближнего зарубежья</div>
-                        <div class="btn--md btn--light modal-get" data-modal="order">рассчитать стоимость</div>
+                        <div class="btn--md btn--light modal-get" data-modal="calc" data-aos="zoom-in" data-aos-delay="1600" data-aos-duration="1000">рассчитать стоимость</div>
                     </div>
                 </div>
             </div>
@@ -935,10 +666,11 @@
                         <span>20%</span>
                     </div>
                     <div class="cost mb-64">
-                        <div class="cost__el">
+                        <div class="cost__el modal-get" data-modal="order">
                             <div class="cost__el-cont">
                                 <div class="cost__el-img">
-                                    <img src="img/car.svg" alt="" />
+                                    <img class="car--black" src="img/car.svg" alt="" />
+                                    <img class="car--color" src="img/car-mark.svg" alt="" />
                                 </div>
                                 <div class="cost__el-text">ежемесячный платёж</div>
                                 <div class="cost__el-cost">до
@@ -946,29 +678,35 @@
                                 <a class="cost__el-link" href="#">Вам доступно более
                                     <br>20 предложений</a>
                             </div>
-                            <div class="btn--md btn--light modal-get" data-modal="order">Оставить заявку</div>
+                            <div class="btn--md btn--light">Оставить заявку</div>
                         </div>
-                        <div class="cost__el">
+                        <div class="cost__el modal-get" data-modal="order">
                             <div class="cost__el-cont">
                                 <div class="cost__el-img">
-                                    <img src="img/car.svg" alt="" />
+                                    <img class="car--black" src="img/car.svg" alt="" />
+                                    <img class="car--color" src="img/car-mark.svg" alt="" />
                                 </div>
                                 <div class="cost__el-text">ежемесячный платёж</div>
                                 <div class="cost__el-cost">до
                                     <span>60 000</span>руб.</div>
+                                <a class="cost__el-link" href="#">Вам доступно более
+                                    <br>20 предложений</a>
                             </div>
-                            <div class="btn--md btn--light modal-get" data-modal="order">Оставить заявку</div>
+                            <div class="btn--md btn--light">Оставить заявку</div>
                         </div>
-                        <div class="cost__el">
+                        <div class="cost__el modal-get" data-modal="order">
                             <div class="cost__el-cont">
                                 <div class="cost__el-img">
-                                    <img src="img/car.svg" alt="" />
+                                    <img class="car--black" src="img/car.svg" alt="" />
+                                    <img class="car--color" src="img/car-mark.svg" alt="" />
                                 </div>
                                 <div class="cost__el-text">ежемесячный платёж</div>
                                 <div class="cost__el-cost">до
                                     <span>100 000</span>руб.</div>
+                                <a class="cost__el-link" href="#">Вам доступно более
+                                    <br>20 предложений</a>
                             </div>
-                            <div class="btn--md btn--light modal-get" data-modal="order">Оставить заявку</div>
+                            <div class="btn--md btn--light">Оставить заявку</div>
                         </div>
                     </div>
                     <div class="type--lg type--bold type--center mb-48">Банки партнеры</div>
@@ -1238,6 +976,49 @@
                         </form>
                     </div>
                 </div>
+                <div class="modal" data-modal="calc">
+                    <div class="modal-content">
+                        <div class="modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="modal-title">Расчитать стоимость</div>
+                        <form>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Ваше имя" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Телефон" />
+                                </div>
+                            </div>
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <input class="input" type="text" placeholder="Город" />
+                                </div>
+                            </div>
+                            <div class="login-remember">
+                                <div class="check-el">
+                                    <label class="style-label style-label--checkbox">
+                                        <input class="style-input" type="checkbox" />
+                                        <div class="style-input-element">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="style-input-text">Я ознакомился с
+                                            <a href="#">политикой конфиденциальности</a>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <input class="modal-send" type="submit" value="Отправить заявку" />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1247,6 +1028,7 @@
     <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
     <script src="bower/fancybox/dist/jquery.fancybox.js"></script>
     <script src="./js/leader-line.min.js"></script>
+    <script src="bower/aos/dist/aos.js"></script>
     <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>
